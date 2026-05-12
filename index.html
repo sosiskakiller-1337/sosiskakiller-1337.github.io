@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Парк аттракционов «Весёлый остров»</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="java.js" defer></script>
+</head>
+<body>
+
+<header>
+    <div class="container header-content">
+
+        <div class="brand">
+            <img src="logo.png" alt="«Весёлый остров»" class="park-logo">
+            <h1>Весёлый остров</h1>
+        </div>
+
+        <nav>
+            <a href="#home">Главная</a>
+            <a href="#booking">Бронирование</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Добро пожаловать в парк аттракционов «Весёлый остров»!</h2>
+            <p>
+                «Весёлый остров» — это семейный парк развлечений, где можно провести
+                выходной день с детьми, друзьями или одногруппниками. В парке есть
+                спокойные аттракционы для детей, активные развлечения для подростков
+                и места для отдыха всей семьи.
+            </p>
+
+            <a href="#booking" class="button">Забронировать билет</a>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>Почему выбирают наш парк</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Для всей семьи</h3>
+                <p>Аттракционы подходят как для маленьких детей, так и для взрослых.</p>
+            </div>
+
+            <div class="card">
+                <h3>Удобное бронирование</h3>
+                <p>Можно заранее оставить заявку на билеты.</p>
+            </div>
+
+            <div class="card">
+                <h3>Безопасность</h3>
+                <p>Перед посещением аттракционов гости обязаны ознакомится с правилами.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>Популярные аттракционы</h2>
+
+        <div class="attractions">
+            <div class="attraction">
+                <img src="https://images.unsplash.com/photo-1513889961551-628c1e5e2ee9?auto=format&fit=crop&w=800&q=80" alt="Колесо обозрения">
+                <h3>Колесо улыбок</h3>
+                <p>Спокойный аттракцион для всей семьи с красивым видом на парк.</p>
+            </div>
+
+            <div class="attraction">
+                <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=800&q=80" alt="Карусель">
+                <h3>Радужная карусель</h3>
+                <p>Яркая карусель для детей младшего возраста.</p>
+            </div>
+
+            <div class="attraction">
+                <img src="https://images.unsplash.com/photo-1528495612343-9ca9f4a4de28?auto=format&fit=crop&w=800&q=80" alt="Активный аттракцион">
+                <h3>Горка «Ветерок»</h3>
+                <p>Весёлый аттракцион для тех, кто любит скорость и эмоции.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container page-title" id="booking">
+        <h2>Бронирование билета</h2>
+        <p>
+            На этой странице вы можете выбрать билет и отправить заявку на посещение парка.
+            После отправки заявки сотрудник парка свяжется с вами для подтверждения.
+        </p>
+    </section>
+
+    <section class="container">
+        <h2>Цены на билеты</h2>
+
+        <table>
+            <tr>
+                <th>Тип билета</th>
+                <th>Описание</th>
+                <th>Цена</th>
+            </tr>
+            <tr>
+                <td>Детский</td>
+                <td>Для детей до 12 лет</td>
+                <td>450 ₽</td>
+            </tr>
+            <tr>
+                <td>Взрослый</td>
+                <td>Для посетителей от 13 лет</td>
+                <td>650 ₽</td>
+            </tr>
+            <tr>
+                <td>Семейный</td>
+                <td>2 взрослых и 1 ребёнок</td>
+                <td>1500 ₽</td>
+            </tr>
+            <tr>
+                <td>Групповой</td>
+                <td>Для компании от 5 человек</td>
+                <td>от 2500 ₽</td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="container form-section">
+        <h2>Забронировать билет:</h2>
+
+        <form id="bookingForm">
+            <label for="name">Ваше имя</label>
+            <input type="text" id="name" placeholder="Введите имя" required>
+
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" placeholder="+7 999 123-45-67" required>
+
+            <label for="date">Дата посещения</label>
+            <input type="date" id="date" required>
+
+            <label for="ticket">Тип билета</label>
+            <select id="ticket" required>
+                <option value="">Выберите билет</option>
+                <option value="Детский">Детский</option>
+                <option value="Взрослый">Взрослый</option>
+                <option value="Семейный">Семейный</option>
+                <option value="Групповой">Групповой</option>
+            </select>
+
+            <label for="count">Количество билетов</label>
+            <input type="number" id="count" min="1" value="1" required>
+
+            <button type="submit" class="button">Отправить заявку</button>
+
+            <p id="message"></p>
+        </form>
+    </section>
+
+    <section class="container page-title" id="contacts">
+        <h2>Контакты</h2>
+        Ниже вы можете найти нас и связаться
+    </section>
+
+    <section class="container contacts">
+        <div class="contact-card">
+            <h3>Адрес</h3>
+            <p>г. Нижний Новгород, ул. Парковая, 15</p>
+        </div>
+
+        <div class="contact-card">
+            <h3>Режим работы</h3>
+            <p>Понедельник — пятница: 10:00–20:00</p>
+            <p>Суббота — воскресенье: 10:00–22:00</p>
+        </div>
+
+        <div class="contact-card">
+            <h3>Связь</h3>
+            <p>Телефон: +7 (999) 999-99-99</p>
+            <p>Email: info@vesely-ostrov.ru</p>
+        </div>
+    </section>
+
+
+</main>
+
+<footer>
+    <p>© 2026 Парк аттракционов «Весёлый остров»</p>
+</footer>
+</body>
+</html>
